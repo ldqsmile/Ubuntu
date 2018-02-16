@@ -1,2 +1,2 @@
 # Ubuntu
-install Ubuntu and the env
+install Ubuntu and the environment
