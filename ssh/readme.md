@@ -26,3 +26,30 @@ sudo /etc/init.d/ssh start
 
 ## SSH配置
 ssh-server配置文件位于/etc/ssh/sshd_config
+1、修改默认端口：默认Port为22,并且已经注释掉了；修改是把注释去掉，并修改成其它的端口。 
+2、禁止root用户远程登陆：修改PermitRootLogin，默认为yes且注释掉了；修改是把注释去掉，并改成no。 
+3、PermitEmptyPasswords   no不允许空密码用户login 
+
+## ssh的公钥认证配置： 
+修改 /etc/ssh/sshd_config 文件 
+RSAAuthentication yes        # 启用 RSA 认证（默认是注释掉的，将注释去掉，如果不是yes，改为yes） 
+PubkeyAuthentication yes     # 启用公钥认证（默认是注释掉的，将注释去掉，如果不是yes，改为yes） 
+AuthorizedKeysFile   %h/.ssh/authorized_keys   # 公钥存放位置，可自定义
+
+之后重新启动ssh服务:/etc/init.d/ssh restart 
+
+## 配置免密登录（从A登录B）
+本地A使用命令生成公钥id_rsa.pub和私钥id_rsa，默认位于~/.ssh
+```
+ssh-keygen -t rsa -f id_rsa
+```
+把公钥拷贝到需要登录主机B的~/.ssh/authorized_keys
+```
+scp ~/.ssh/id_rsa.pub name@ip:~/.ssh/authorized_keys
+```
+即可远程免密登录ssh。
+注意B主机文件权限
+```
+chmod 755 ~
+chmod 755 ~/.ssh
+```
