@@ -1,0 +1,17 @@
+# Github way (recommended)
+Install:  
+```
+curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+```
+
+Update: 
+```
+pyenv update  
+```
+
+Add the following to ~/.bashrc or ~/.zshrc
+```
+export PATH="~/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+```
