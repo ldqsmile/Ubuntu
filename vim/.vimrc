@@ -162,3 +162,6 @@ set smarttab
 set showcmd
 "显示行号
 set number
+
+"复制代码时自动缩进开关
+set pastetoggle=<F9>
