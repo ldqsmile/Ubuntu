@@ -78,7 +78,7 @@ set backspace=2
 set whichwrap+=<,>,h,l 
 
 " 可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位） 
-set mouse=a 
+set mouse=v 
 set selection=exclusive 
 set selectmode=mouse,key 
 
