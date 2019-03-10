@@ -13,7 +13,7 @@ pip install shadowsocks
 {
   "server":"0.0.0.0",
   "port_password": {
-        "8888": "123456",
+        "8888": "123456"
     },
     "timeout": 300,
     "method": "aes-256-cfb",
