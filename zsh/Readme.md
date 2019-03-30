@@ -51,4 +51,14 @@ wget http://mimosa-pudica.net/src/incr-0.2.zsh -O $ZSH_CUSTOM/plugins/incr/incr.
 source $ZSH_CUSTOM/plugins/incr/incr*.zsh
 ```
 
+如autojump插件，需要先安装autojump
+```
+sudo apt-get install autojump
+```
+再修改~/.zshrc：
+```
+plugins=(autojump)   
+. /usr/share/autojump/autojump.sh
+```
+
 修改完以后，source ~/.zshrc生效。
