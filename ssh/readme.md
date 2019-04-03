@@ -56,5 +56,6 @@ scp ~/.ssh/id_rsa.pub user@server:~/.ssh/authorized_keys
 ```
 chmod 755 ~
 chmod 755 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
 ```
 A主机ssh-agent、ssh-add
