@@ -31,6 +31,9 @@ Then install python etc.
 
 ```
 pyenv install 2.7.10
+
+or: 
+v=2.7.10|wget http://mirrors.sohu.com/python/$v/Python-$v.tar.xz -P ~/.pyenv/cache/;pyenv install $v
 ```
 
 if `pyenv: no such command virtualenv-init` error:
