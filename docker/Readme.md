@@ -1,8 +1,5 @@
 # 安装
-## 安装pip
-```
-curl -s https://bootstrap.pypa.io/get-pip.py | python3
-```
+先安装pip
 
 ## 安装最新版docker
 ```
